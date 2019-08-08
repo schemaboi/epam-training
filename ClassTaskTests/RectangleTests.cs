@@ -5,6 +5,8 @@ namespace Epam.HomeWork.ClassTask.Tests
 {
     public class RectangleTests
     {
+        private const int PRECISION = 5;
+
         [Fact]
         public void CalculatesArea() 
         {
@@ -15,7 +17,7 @@ namespace Epam.HomeWork.ClassTask.Tests
 
             double actualArea = rectangle.CalculateArea();
 
-            Assert.Equal(expectedArea, actualArea, 5);
+            Assert.Equal(expectedArea, actualArea, PRECISION);
         }
 
         [Fact]
@@ -28,7 +30,7 @@ namespace Epam.HomeWork.ClassTask.Tests
 
             double actualArea = rectangle.CalculatePerimeter();
 
-            Assert.Equal(expectedPerimeter, actualArea, 5);
+            Assert.Equal(expectedPerimeter, actualArea, PRECISION);
         }
 
         [Fact]
@@ -43,8 +45,8 @@ namespace Epam.HomeWork.ClassTask.Tests
             double actualHeight = rectangle.Height;
             double actualWidth = rectangle.Width;
 
-            Assert.Equal(actualHeight, expectedHeight, 5);
-            Assert.Equal(actualWidth, expectedWidth, 5);
+            Assert.Equal(actualHeight, expectedHeight, PRECISION);
+            Assert.Equal(actualWidth, expectedWidth, PRECISION);
         }
 
         [Fact]
