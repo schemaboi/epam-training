@@ -5,7 +5,7 @@ namespace Epam.HomeWork.ClassTask.Tests
 {
     public class RectangleTest
     {
-        private const int PRECISION = 5;
+        private const int PRECISION = 15;
 
         [Fact]
         public void CalculatesArea() 

@@ -5,13 +5,14 @@ namespace Epam.HomeWork.ClassTask.Tests
 {
     public class ComplexNumberTest
     {
-        public const int PRECISION = 5;
+        public const int PRECISION = 15;
 
         [Fact]
         public void CalculatesSimpleAriphmetic()
         {
             var leftComplexNumber = new ComplexNumber(2, 2);
             var rightComplexNumber = new ComplexNumber(2, 3);
+
             var expectedSum = new ComplexNumber(4, 5);
             var expectedDiffrence = new ComplexNumber(0, -1);
             var expectedProduct = new ComplexNumber(-2, 10);
