@@ -7,8 +7,8 @@ namespace Epam.HomeWork.ClassTask
     public class Rectangle
     {
         #region Fields
-
-        private static readonly string _constructionErrorMessage = "Invalid points for constructing a rectangle!";
+         
+        private const string CONSTRUCTION_ERROR_MESSAGE = "Invalid points for constructing a rectangle!";
         private Point _leftUpper;
         private Point _rightLower;
 
@@ -21,7 +21,7 @@ namespace Epam.HomeWork.ClassTask
         {
             if (!IsPossibleRectangle(leftUpper, rightLower))
             {
-                throw new ArgumentException(_constructionErrorMessage);
+                throw new ArgumentException(CONSTRUCTION_ERROR_MESSAGE);
             }
             _leftUpper = leftUpper;
             _rightLower = rightLower;
@@ -46,7 +46,7 @@ namespace Epam.HomeWork.ClassTask
             {
                 if(!IsPossibleRectangle(value, _rightLower))
                 {
-                    throw new ArgumentException(_constructionErrorMessage);
+                    throw new ArgumentException(CONSTRUCTION_ERROR_MESSAGE);
                 }
                 _leftUpper = value;
             }
@@ -59,7 +59,7 @@ namespace Epam.HomeWork.ClassTask
             {
                 if (!IsPossibleRectangle(_leftUpper, value))
                 {
-                    throw new ArgumentException(_constructionErrorMessage);
+                    throw new ArgumentException(CONSTRUCTION_ERROR_MESSAGE);
                 }
                 _rightLower = value;
             }
