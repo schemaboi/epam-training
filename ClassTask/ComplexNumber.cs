@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Epam.HomeWork.ClassTask
 {
@@ -95,7 +93,7 @@ namespace Epam.HomeWork.ClassTask
             var inverted = (ComplexNumber)Clone();
 
             inverted.Real /= Real * Real + Imaginary * Imaginary;
-            inverted.Imaginary /= Real * Real + Imaginary * Imaginary;
+            inverted.Imaginary /= -(Real * Real + Imaginary * Imaginary);
 
             return inverted;
         }
