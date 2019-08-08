@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Epam.HomeWork.ClassTask
 {
@@ -6,13 +7,18 @@ namespace Epam.HomeWork.ClassTask
     {
         static void Main(string[] args)
         {
+            Console.BackgroundColor = ConsoleColor.White;
             try
             {
                 RectangleClassShowcase();
                 StaticRectangleClassShowcase();
 
+                ConsolePause();
+
                 CircleClassShowcase();
                 StaticCircleClassShowcase();
+
+                ConsolePause();
 
                 ComplexClassShowcase();
             }
@@ -21,14 +27,28 @@ namespace Epam.HomeWork.ClassTask
                 Console.WriteLine(e.Message);
             }
 
+            ConsolePause();
+        }
+
+        private static void ConsolePause()
+        {
+            Console.WriteLine("Press any key to continue...");
             Console.ReadLine();
+            Console.Clear();
+        }
+
+        private static void WriteHeaderMessage(string message)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(message);
+            Console.ForegroundColor = ConsoleColor.Black;
         }
 
         #region RECTANGLE
 
         private static void RectangleClassShowcase()
         {
-            Console.WriteLine("\t>> Start Rectangle Class Showcase \n");
+            WriteHeaderMessage(">> Start Rectangle Class Showcase \n");
 
             ReadPoints(out Point leftUpper, out Point rightLower);
 
@@ -40,12 +60,12 @@ namespace Epam.HomeWork.ClassTask
                 $"Height: {rectangle.Height}, " +
                 $"Width: {rectangle.Width}");
 
-            Console.WriteLine("\n\t>> End Rectangle Class Showcase \n");
+            WriteHeaderMessage("\n>> End Rectangle Class Showcase \n");
         }
 
         private static void StaticRectangleClassShowcase()
         {
-            Console.WriteLine("\t>> Start StaticRectangle Class Showcase \n");
+            WriteHeaderMessage(">> Start StaticRectangle Class Showcase \n");
 
             ReadPoints(out Point leftUpper, out Point rightLower);
 
@@ -55,7 +75,7 @@ namespace Epam.HomeWork.ClassTask
                 $"Height: {StaticRectangle.CalculateHeight(leftUpper, rightLower)}, " +
                 $"Width: {StaticRectangle.CalculateWidth(leftUpper, rightLower)}");
 
-            Console.WriteLine("\n\t>> End StaticRectangle Class Showcase \n");
+            WriteHeaderMessage("\n>> End StaticRectangle Class Showcase \n");
         }
 
         private static void ReadPoints(out Point leftUpper, out Point rightLower)
@@ -82,7 +102,7 @@ namespace Epam.HomeWork.ClassTask
 
         private static void CircleClassShowcase()
         {
-            Console.WriteLine("\t>> Start Circle Class Showcase \n");
+            WriteHeaderMessage(">> Start Circle Class Showcase \n");
 
             Console.Write("Enter radius: ");
             double radius = double.Parse(Console.ReadLine());
@@ -92,12 +112,12 @@ namespace Epam.HomeWork.ClassTask
                 $"Area: {circle.Area}, " +
                 $"Length: {circle.Length}.");
 
-            Console.WriteLine("\n\t>> End Circle Class Showcase \n");
+            WriteHeaderMessage("\n>> End Circle Class Showcase \n");
         }
 
         private static void StaticCircleClassShowcase()
         {
-            Console.WriteLine("\t>> Start StaticCircle Class Showcase \n");
+            WriteHeaderMessage(">> Start StaticCircle Class Showcase \n");
 
             Console.Write("Enter radius: ");
             double radius = double.Parse(Console.ReadLine());
@@ -106,7 +126,7 @@ namespace Epam.HomeWork.ClassTask
                 $"Area: {StaticCircle.CalculateArea(radius)}, " +
                 $"Length: {StaticCircle.CalculateLength(radius)}.");
 
-            Console.WriteLine("\n\t>> End StaticCircle Class Showcase \n");
+            WriteHeaderMessage("\n>> End StaticCircle Class Showcase \n");
         }
 
         #endregion
@@ -115,7 +135,7 @@ namespace Epam.HomeWork.ClassTask
 
         private static void ComplexClassShowcase()
         {
-            Console.WriteLine("\t>> Start ComplexNumber Class Showcase \n");
+            WriteHeaderMessage(">> Start ComplexNumber Class Showcase \n");
 
             Console.WriteLine("\nEnter first complex number: ");
             ReadComplexNumber(out ComplexNumber left);
@@ -127,9 +147,33 @@ namespace Epam.HomeWork.ClassTask
             Console.WriteLine($"Sum: {left + right}");
             Console.WriteLine($"Diffrence: {left - right}");
             Console.WriteLine($"Product: {left * right}");
-            Console.WriteLine($"Quotient: {left / right}");
+            Console.WriteLine($"Quotient: {left / right}\n");
 
-            Console.WriteLine("\n\t>> End ComplexNumber Class Showcase \n");
+            var complexNumberList = new List<ComplexNumber>
+            {
+                left,
+                right,
+                left + right,
+                left - right,
+                left * right,
+                left / right
+            };
+
+            Console.WriteLine("\nList before sort: ");
+            foreach (var number in complexNumberList)
+            {
+                Console.WriteLine($" - {number}");
+            }
+
+            complexNumberList.Sort();
+
+            Console.WriteLine("\nList after sort: ");
+            foreach(var number in complexNumberList)
+            {
+                Console.WriteLine($" - {number}");
+            }
+
+            WriteHeaderMessage("\n>> End ComplexNumber Class Showcase \n");
         }
 
         private static void ReadComplexNumber(out ComplexNumber number)
