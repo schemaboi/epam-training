@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Epam.HomeWork.ClassTask.Tests
 {
-    public class CircleTests
+    public class StaticCircleTest
     {
         private const int PRECISION = 5;
 
@@ -11,13 +11,9 @@ namespace Epam.HomeWork.ClassTask.Tests
         public void CalculatesArea()
         {
             const double radius = 3;
-            var circle = new Circle
-            {
-                Radius = radius
-            };
-            const double expectedArea = Circle.PI * radius * radius;
+            const double expectedArea = StaticCircle.PI * radius * radius;
 
-            double actualArea = circle.Area;
+            double actualArea = StaticCircle.CalculateArea(radius);
 
             Assert.Equal(expectedArea, actualArea, PRECISION);
         }
@@ -26,13 +22,9 @@ namespace Epam.HomeWork.ClassTask.Tests
         public void CalculatesLength()
         {
             const double radius = 3;
-            var circle = new Circle
-            {
-                Radius = radius
-            };
-            const double expectedLength = 2 * Circle.PI * radius;
+            const double expectedLength = 2 * StaticCircle.PI * radius;
 
-            double actualLength = circle.Length;
+            double actualLength = StaticCircle.CalculateLength(radius);
 
             Assert.Equal(expectedLength, actualLength, PRECISION);
         }
