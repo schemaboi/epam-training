@@ -54,21 +54,5 @@ namespace Epam.HomeWork.ClassTask.Tests
             Assert.True(left != other);
             Assert.True(left.Equals(right));
         }
-
-        [Fact]
-        public void ConvertsToString()
-        {
-            var zeroComplex = new ComplexNumber();
-            var negativeComplex = new ComplexNumber(-2, -2);
-            var positiveComplex = new ComplexNumber(2, 2);
-
-            var expectedZeroComplexNumberString = "0+0i";
-            var expectedNegativeComplexNumberString = "-2-2i";
-            var expectedPositiveComplexNumberString = "2+2i";
-
-            Assert.Equal(expectedZeroComplexNumberString, zeroComplex.ToString());
-            Assert.Equal(expectedNegativeComplexNumberString, negativeComplex.ToString());
-            Assert.Equal(expectedPositiveComplexNumberString, positiveComplex.ToString());
-        }
     }
 }

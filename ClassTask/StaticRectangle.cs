@@ -6,11 +6,12 @@ namespace Epam.HomeWork.ClassTask
 {
     public static class StaticRectangle
     {
+        public const string BAD_ARGUMENTS_ERROR = "Invalid points for a rectangle!";
         public static double CalculateArea(Point leftUpper, Point rightLower)
         {
             if(!IsPossibleRectangle(leftUpper, rightLower))
             {
-                throw new ArgumentException("Invalid points for constructing a rectangle!");
+                throw new ArgumentException(BAD_ARGUMENTS_ERROR);
             }
             return CalculateHeight(leftUpper, rightLower) 
                 * CalculateWidth(leftUpper, rightLower);
@@ -20,17 +21,30 @@ namespace Epam.HomeWork.ClassTask
         {
             if (!IsPossibleRectangle(leftUpper, rightLower))
             {
-                throw new ArgumentException("Invalid points for constructing a rectangle!");
+                throw new ArgumentException(BAD_ARGUMENTS_ERROR);
             }
             return 2 * (CalculateHeight(leftUpper, rightLower)
                 + CalculateWidth(leftUpper, rightLower));
         }
 
         public static double CalculateHeight(Point leftUpper, Point rightLower)
-            => leftUpper.Y - rightLower.Y;
+        {
+            if (!IsPossibleRectangle(leftUpper, rightLower))
+            {
+                throw new ArgumentException(BAD_ARGUMENTS_ERROR);
+            }
+            return leftUpper.Y - rightLower.Y;
+        }
+            
 
         public static double CalculateWidth(Point leftUpper, Point rightLower)
-            => rightLower.X - leftUpper.X;
+        {
+            if (!IsPossibleRectangle(leftUpper, rightLower))
+            {
+                throw new ArgumentException(BAD_ARGUMENTS_ERROR);
+            }
+            return rightLower.X - leftUpper.X;
+        }
 
         private static bool IsPossibleRectangle(Point leftUpper, Point rightLower)
         {

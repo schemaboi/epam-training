@@ -2,7 +2,7 @@
 
 namespace Epam.HomeWork.ClassTask
 {
-    public class ComplexNumber : ICloneable, IComparable<ComplexNumber>
+    public class ComplexNumber : ICloneable
     {
         public ComplexNumber(double real = 0.0, double imaginary = 0.0)
         {
@@ -14,16 +14,7 @@ namespace Epam.HomeWork.ClassTask
 
         public object Clone()
         {
-            return new ComplexNumber(Real, Imaginary);
-        }
-
-        public int CompareTo(ComplexNumber other)
-        {
-            if (Real == other.Real)
-            {
-                return Imaginary.CompareTo(other.Imaginary);
-            }
-            return Real.CompareTo(other.Real);
+            return MemberwiseClone() as ComplexNumber;
         }
 
         #endregion
@@ -90,18 +81,18 @@ namespace Epam.HomeWork.ClassTask
 
         public ComplexNumber Invert()
         {
-            var inverted = (ComplexNumber)Clone();
+            var inverted = Clone() as ComplexNumber;
+            double denominator = Real * Real + Imaginary * Imaginary;
 
-            inverted.Real /= Real * Real + Imaginary * Imaginary;
-            inverted.Imaginary /= -(Real * Real + Imaginary * Imaginary);
+            inverted.Real /= denominator;
+            inverted.Imaginary /= -(denominator);
 
             return inverted;
         }
 
         public override bool Equals(object obj)
         {
-            return !(obj is ComplexNumber value) ? false 
-                : Real == value.Real && Imaginary == value.Imaginary;
+            return obj?.ToString() == ToString();
         }
 
         public override int GetHashCode()
@@ -111,16 +102,16 @@ namespace Epam.HomeWork.ClassTask
 
         public override string ToString()
         {
-            string number = "";
+            string numberAsString = "";
             if(Imaginary >= 0)
             {
-                number = $"{Real}+{Imaginary}i";
+                numberAsString = $"{Real}+{Imaginary}i";
             }
             else
             {
-                number = $"{Real}{Imaginary}i";
+                numberAsString = $"{Real}{Imaginary}i";
             }
-            return number;
+            return numberAsString;
         }
 
         #endregion

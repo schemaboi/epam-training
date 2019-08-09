@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassTask", "ClassTask\ClassTask.csproj", "{0211B320-BD9C-41B4-A202-BEDE3BEF4885}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassTask", "ClassTask\ClassTask.csproj", "{0211B320-BD9C-41B4-A202-BEDE3BEF4885}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassTaskTests", "ClassTaskTests\ClassTaskTests.csproj", "{A5DE5B13-0EB2-4533-988A-D9B36B560731}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassTaskTests", "ClassTaskTests\ClassTaskTests.csproj", "{A5DE5B13-0EB2-4533-988A-D9B36B560731}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0211B320-BD9C-41B4-A202-BEDE3BEF4885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -44,5 +41,11 @@ Global
 		{A5DE5B13-0EB2-4533-988A-D9B36B560731}.Release|x64.Build.0 = Release|Any CPU
 		{A5DE5B13-0EB2-4533-988A-D9B36B560731}.Release|x86.ActiveCfg = Release|Any CPU
 		{A5DE5B13-0EB2-4533-988A-D9B36B560731}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87634425-AB54-4A87-ABC1-E04302CB1F43}
 	EndGlobalSection
 EndGlobal

@@ -29,10 +29,8 @@ namespace Epam.HomeWork.ClassTask
 
         public Rectangle(double leftUpperX, double leftUpperY,
                          double rightLowerX, double rightLowerY)
-            : this(new Point(leftUpperX, leftUpperY), new Point(rightLowerX, rightLowerY))
-        {
-
-        }
+            : this(new Point(leftUpperX, leftUpperY), new Point(rightLowerX, rightLowerY)) { }
+               
 
         #endregion 
 

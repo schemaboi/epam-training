@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Epam.HomeWork.ClassTask
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
@@ -143,35 +142,10 @@ namespace Epam.HomeWork.ClassTask
             Console.WriteLine("\nEnter second complex number: ");
             ReadComplexNumber(out ComplexNumber right);
 
-
             Console.WriteLine($"Sum: {left + right}");
             Console.WriteLine($"Diffrence: {left - right}");
             Console.WriteLine($"Product: {left * right}");
             Console.WriteLine($"Quotient: {left / right}\n");
-
-            var complexNumberList = new List<ComplexNumber>
-            {
-                left,
-                right,
-                left + right,
-                left - right,
-                left * right,
-                left / right
-            };
-
-            Console.WriteLine("\nList before sort: ");
-            foreach (var number in complexNumberList)
-            {
-                Console.WriteLine($" - {number}");
-            }
-
-            complexNumberList.Sort();
-
-            Console.WriteLine("\nList after sort: ");
-            foreach(var number in complexNumberList)
-            {
-                Console.WriteLine($" - {number}");
-            }
 
             WriteHeaderMessage("\n>> End ComplexNumber Class Showcase \n");
         }
@@ -181,10 +155,12 @@ namespace Epam.HomeWork.ClassTask
             number = new ComplexNumber();
 
             Console.Write("Enter real part: ");
-            number.Real = double.Parse(Console.ReadLine());
+            string input = Console.ReadLine();
+            number.Real = Convert.ToDouble(input);
 
             Console.Write("Enter imaginary part: ");
-            number.Imaginary = double.Parse(Console.ReadLine());
+            input = Console.ReadLine();
+            number.Imaginary = Convert.ToDouble(input);
         }
 
         #endregion
