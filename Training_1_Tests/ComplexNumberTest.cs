@@ -5,8 +5,6 @@ namespace Epam.HomeWork.ClassTask.Tests
 {
     public class ComplexNumberTest
     {
-        public const int PRECISION = 15;
-
         [Fact]
         public void CalculatesSimpleAriphmetic()
         {
