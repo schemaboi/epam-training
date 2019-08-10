@@ -2,7 +2,7 @@
 
 namespace Epam.HomeWork.ClassTask
 {
-    public class ComplexNumber : ICloneable
+    public struct ComplexNumber : IEquatable<ComplexNumber>
     {
         public ComplexNumber(double real = 0.0, double imaginary = 0.0)
         {
@@ -12,17 +12,17 @@ namespace Epam.HomeWork.ClassTask
 
         #region Interfaces
 
-        public object Clone()
+        public bool Equals(ComplexNumber other)
         {
-            return MemberwiseClone() as ComplexNumber;
+            return Real == other.Real && Imaginary == other.Imaginary;
         }
 
         #endregion
 
         #region Properties
 
-        public double Real { get; set; }
-        public double Imaginary { get; set; }
+        public double Real { get; }
+        public double Imaginary { get; }
 
         #endregion
 
@@ -30,38 +30,23 @@ namespace Epam.HomeWork.ClassTask
 
         public static ComplexNumber operator +(ComplexNumber left, ComplexNumber right)
         {
-            return new ComplexNumber
-            {
-                Real = left.Real + right.Real,
-                Imaginary = left.Imaginary + right.Imaginary
-            };
+            return new ComplexNumber(left.Real + right.Real, left.Imaginary + right.Imaginary);
         }
 
         public static ComplexNumber operator -(ComplexNumber left, ComplexNumber right)
         {
-            return new ComplexNumber
-            {
-                Real = left.Real - right.Real,
-                Imaginary = left.Imaginary - right.Imaginary
-            };
+            return new ComplexNumber(left.Real - right.Real, left.Imaginary - right.Imaginary);
         }
 
         public static ComplexNumber operator -(ComplexNumber value)
         {
-            return new ComplexNumber
-            {
-                Real = -value.Real,
-                Imaginary = -value.Imaginary
-            };
+            return new ComplexNumber(-value.Real, -value.Imaginary);
         }
 
         public static ComplexNumber operator *(ComplexNumber left, ComplexNumber right)
         {
-            return new ComplexNumber
-            {
-                Real = left.Real * right.Real - left.Imaginary * right.Imaginary,
-                Imaginary = left.Real * right.Imaginary + left.Imaginary * right.Real
-            };
+            return new ComplexNumber(left.Real * right.Real - left.Imaginary * right.Imaginary,
+                                     left.Real * right.Imaginary + left.Imaginary * right.Real);
         }
 
         public static ComplexNumber operator /(ComplexNumber left, ComplexNumber right)
@@ -75,24 +60,39 @@ namespace Epam.HomeWork.ClassTask
         public static bool operator !=(ComplexNumber left, ComplexNumber right)
             => !left.Equals(right);
 
+        public static implicit operator ComplexNumber(byte value)
+            => new ComplexNumber(value);
+
+        public static implicit operator ComplexNumber(short value)
+            => new ComplexNumber(value);
+
+        public static implicit operator ComplexNumber(int value)
+            => new ComplexNumber(value);
+
+        public static implicit operator ComplexNumber(long value)
+            => new ComplexNumber(value);
+
+        public static implicit operator ComplexNumber(float value)
+            => new ComplexNumber(value);
+
+        public static implicit operator ComplexNumber(double value)
+            => new ComplexNumber(value);
+
+
         #endregion
 
         #region Methods
 
         public ComplexNumber Invert()
         {
-            var inverted = Clone() as ComplexNumber;
             double denominator = Real * Real + Imaginary * Imaginary;
 
-            inverted.Real /= denominator;
-            inverted.Imaginary /= -(denominator);
-
-            return inverted;
+            return new ComplexNumber(Real / denominator, -Imaginary / denominator);
         }
 
         public override bool Equals(object obj)
         {
-            return obj?.ToString() == ToString();
+            return obj is ComplexNumber complexNumber ? Equals(complexNumber) : false;
         }
 
         public override int GetHashCode()
