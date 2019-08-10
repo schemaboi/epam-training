@@ -102,16 +102,7 @@ namespace Epam.HomeWork.ClassTask
 
         public override string ToString()
         {
-            string numberAsString = "";
-            if(Imaginary >= 0)
-            {
-                numberAsString = $"{Real}+{Imaginary}i";
-            }
-            else
-            {
-                numberAsString = $"{Real}{Imaginary}i";
-            }
-            return numberAsString;
+            return Imaginary >= 0 ? $"{Real}+{Imaginary}i" : $"{Real}{Imaginary}i";
         }
 
         #endregion
