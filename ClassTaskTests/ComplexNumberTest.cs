@@ -25,20 +25,11 @@ namespace Epam.HomeWork.ClassTask.Tests
             var actualQuotient = leftComplexNumber / rightComplexNumber;
             var actualNegated = -leftComplexNumber;
 
-            Assert.Equal(expectedSum.Real, actualSum.Real, PRECISION);
-            Assert.Equal(expectedSum.Imaginary, actualSum.Imaginary, PRECISION);
-
-            Assert.Equal(expectedDiffrence.Real, actualDiffrence.Real, PRECISION);
-            Assert.Equal(expectedDiffrence.Imaginary, actualDiffrence.Imaginary, PRECISION);
-
-            Assert.Equal(expectedProduct.Real, actualProduct.Real, PRECISION);
-            Assert.Equal(expectedProduct.Imaginary, actualProduct.Imaginary, PRECISION);
-
-            Assert.Equal(expectedQuotient.Real, actualQuotient.Real, PRECISION);
-            Assert.Equal(expectedQuotient.Imaginary, actualQuotient.Imaginary, PRECISION);
-
-            Assert.Equal(expectedNegated.Real, actualNegated.Real, PRECISION);
-            Assert.Equal(expectedNegated.Imaginary, actualNegated.Imaginary, PRECISION);
+            Assert.Equal(expectedSum, actualSum);
+            Assert.Equal(expectedDiffrence, actualDiffrence);
+            Assert.Equal(expectedProduct, actualProduct);
+            Assert.Equal(expectedQuotient, actualQuotient);
+            Assert.Equal(expectedNegated, actualNegated);
         }
 
         [Fact]
@@ -49,10 +40,24 @@ namespace Epam.HomeWork.ClassTask.Tests
             var other = new ComplexNumber(8, 8);
              
             Assert.Equal(left, right);
+            Assert.True(left.Equals(right as object));
+            Assert.True(left.GetHashCode() == right.GetHashCode());
+            Assert.True((-left).ToString() == (-right).ToString());
             Assert.NotEqual(left, other);
             Assert.True(left == right);
             Assert.True(left != other);
             Assert.True(left.Equals(right));
+        }
+
+        [Fact]
+        public void ConvertsFromBaseTypes()
+        {
+            Assert.Equal((byte)1, new ComplexNumber(1));
+            Assert.Equal((short)1, new ComplexNumber(1));
+            Assert.Equal(1, new ComplexNumber(1));
+            Assert.Equal(1L, new ComplexNumber(1));
+            Assert.Equal(1.0f, new ComplexNumber(1));
+            Assert.Equal(1.0d, new ComplexNumber(1));
         }
     }
 }

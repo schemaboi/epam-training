@@ -152,15 +152,15 @@ namespace Epam.HomeWork.ClassTask
 
         private static void ReadComplexNumber(out ComplexNumber number)
         {
-            number = new ComplexNumber();
-
             Console.Write("Enter real part: ");
             string input = Console.ReadLine();
-            number.Real = Convert.ToDouble(input);
+            double real = Convert.ToDouble(input);
 
             Console.Write("Enter imaginary part: ");
             input = Console.ReadLine();
-            number.Imaginary = Convert.ToDouble(input);
+            double imaginary = Convert.ToDouble(input);
+
+            number = new ComplexNumber(real, imaginary);
         }
 
         #endregion
