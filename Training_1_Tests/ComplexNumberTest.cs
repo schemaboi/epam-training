@@ -31,6 +31,19 @@ namespace Epam.HomeWork.ClassTask.Tests
         }
 
         [Fact]
+        public void HandlesDivisionByZero()
+        {
+            Action edgyCode = () => 
+            {
+                ComplexNumber leftComplexNumber = new ComplexNumber(2, 2);
+                ComplexNumber rightComplexNumber = new ComplexNumber(0, 0);
+                ComplexNumber result = leftComplexNumber / rightComplexNumber;
+            };
+
+            Assert.Throws<DivideByZeroException>(edgyCode);
+        }
+
+        [Fact]
         public void ComparesComplexNumbers()
         {
             var left = new ComplexNumber(9, 6);
