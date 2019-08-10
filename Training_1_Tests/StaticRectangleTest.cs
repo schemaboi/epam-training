@@ -49,16 +49,15 @@ namespace Epam.HomeWork.ClassTask.Tests
         [Fact]
         public void HandlesInvalidArguments() 
         {
-            Type execptionType = new ArgumentException("Test").GetType();
             Action calculateHeightCode = PassesInvalidArgumentsToCalculateHeight;
             Action calculateWidthCode = PassesInvalidArgumentsToCalculateWidth;
             Action calculateAreaCode = PassesInvalidArgumentsToCalculateArea;
             Action calculatePerimetrCode = PassesInvalidArgumentsToCalculatePerimeter;
              
-            Assert.Throws(execptionType, calculateHeightCode);
-            Assert.Throws(execptionType, calculateWidthCode);
-            Assert.Throws(execptionType, calculateAreaCode);
-            Assert.Throws(execptionType, calculatePerimetrCode);
+            Assert.Throws<ArgumentException>(calculateHeightCode);
+            Assert.Throws<ArgumentException>(calculateWidthCode);
+            Assert.Throws<ArgumentException>(calculateAreaCode);
+            Assert.Throws<ArgumentException>(calculatePerimetrCode);
         }
 
         private void PassesInvalidArgumentsToCalculateHeight() 

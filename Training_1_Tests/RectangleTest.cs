@@ -52,14 +52,13 @@ namespace Epam.HomeWork.ClassTask.Tests
         [Fact]
         public void HandlesInvalidArguments()
         {
-            Type execptionType = new ArgumentException("Test").GetType();
             Action constructorCode = CreateInvalidRectangle;
             Action leftUpperSetter = SetInvalidLeftUpperPoint;
             Action rightLowerSetter = SetInvalidRightLower;
 
-            Assert.Throws(execptionType, constructorCode);
-            Assert.Throws(execptionType, leftUpperSetter);
-            Assert.Throws(execptionType, rightLowerSetter);
+            Assert.Throws<ArgumentException>(constructorCode);
+            Assert.Throws<ArgumentException>(leftUpperSetter);
+            Assert.Throws<ArgumentException>(rightLowerSetter);
         }
 
         private void CreateInvalidRectangle()
