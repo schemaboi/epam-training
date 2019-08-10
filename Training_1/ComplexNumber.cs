@@ -86,7 +86,10 @@ namespace Epam.HomeWork.ClassTask
         public ComplexNumber Invert()
         {
             double denominator = Real * Real + Imaginary * Imaginary;
-
+            if(denominator == 0)
+            {
+                throw new DivideByZeroException("Division by zero in ComplexNumber.Invert()");
+            }
             return new ComplexNumber(Real / denominator, -Imaginary / denominator);
         }
 
