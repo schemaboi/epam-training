@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassTask", "ClassTask\ClassTask.csproj", "{0211B320-BD9C-41B4-A202-BEDE3BEF4885}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Training_1", "ClassTask\Training_1.csproj", "{0211B320-BD9C-41B4-A202-BEDE3BEF4885}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassTaskTests", "ClassTaskTests\ClassTaskTests.csproj", "{A5DE5B13-0EB2-4533-988A-D9B36B560731}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Training_1_Tests", "ClassTaskTests\Training_1_Tests.csproj", "{A5DE5B13-0EB2-4533-988A-D9B36B560731}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
