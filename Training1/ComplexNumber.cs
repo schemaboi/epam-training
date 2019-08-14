@@ -95,7 +95,7 @@ namespace Epam.HomeWork.Training1
 
         public override bool Equals(object obj)
         {
-            return obj is ComplexNumber complexNumber ? Equals(complexNumber) : false;
+            return obj is ComplexNumber complexNumber && Equals(complexNumber);
         }
 
         public override int GetHashCode()
