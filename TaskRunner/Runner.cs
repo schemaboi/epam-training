@@ -2,10 +2,10 @@
  
 namespace Epam.HomeWork
 {
-    class Program
+    public static class Runner
     {
-        static void Main(string[] args)
-        {
+        static void Main(string[] args) 
+        { 
             Console.WriteLine("Hello World!");
         }
     }
