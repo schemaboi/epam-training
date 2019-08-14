@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Epam.HomeWork.ClassTask
+namespace Epam.HomeWork.Training1
 {
     public static class StaticCircle
     {

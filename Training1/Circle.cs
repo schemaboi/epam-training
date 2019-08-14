@@ -1,7 +1,7 @@
 ﻿using System;
 
-namespace Epam.HomeWork.ClassTask
-{
+namespace Epam.HomeWork.Training1
+{ 
     public class Circle
     {
         public const double PI = 3.14159265359;

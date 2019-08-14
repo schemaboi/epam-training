@@ -1,7 +1,7 @@
 ﻿using System;
 using Xunit;
 
-namespace Epam.HomeWork.ClassTask.Tests
+namespace Epam.HomeWork.Training1.Tests
 {
     public class StaticRectangleTest
     {

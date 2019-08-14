@@ -1,8 +1,8 @@
 ﻿
-namespace Epam.HomeWork.ClassTask
+namespace Epam.HomeWork.Training1
 {
-    public struct Point 
-    {   
+    public struct Point
+    {
         public Point(double x, double y)
         {
             X = x;

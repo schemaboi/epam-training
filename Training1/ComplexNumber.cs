@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Epam.HomeWork.ClassTask
+namespace Epam.HomeWork.Training1
 {
     public struct ComplexNumber : IEquatable<ComplexNumber>
     {
@@ -54,7 +54,7 @@ namespace Epam.HomeWork.ClassTask
             return left * right.Invert();
         }
 
-        public static bool operator ==(ComplexNumber left, ComplexNumber right) 
+        public static bool operator ==(ComplexNumber left, ComplexNumber right)
             => left.Equals(right);
 
         public static bool operator !=(ComplexNumber left, ComplexNumber right)
@@ -86,7 +86,7 @@ namespace Epam.HomeWork.ClassTask
         public ComplexNumber Invert()
         {
             double denominator = Real * Real + Imaginary * Imaginary;
-            if(denominator == 0)
+            if (denominator == 0)
             {
                 throw new DivideByZeroException("Division by zero in ComplexNumber.Invert()");
             }

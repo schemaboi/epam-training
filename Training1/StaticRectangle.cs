@@ -1,17 +1,17 @@
 ﻿using System;
 
-namespace Epam.HomeWork.ClassTask
+namespace Epam.HomeWork.Training1
 {
     public static class StaticRectangle
     {
         public const string BAD_ARGUMENTS_ERROR = "Invalid points for a rectangle!";
         public static double CalculateArea(Point leftUpper, Point rightLower)
         {
-            if(!IsPossibleRectangle(leftUpper, rightLower))
+            if (!IsPossibleRectangle(leftUpper, rightLower))
             {
                 throw new ArgumentException(BAD_ARGUMENTS_ERROR);
             }
-            return CalculateHeight(leftUpper, rightLower) 
+            return CalculateHeight(leftUpper, rightLower)
                 * CalculateWidth(leftUpper, rightLower);
         }
 
@@ -33,7 +33,7 @@ namespace Epam.HomeWork.ClassTask
             }
             return leftUpper.Y - rightLower.Y;
         }
-            
+
 
         public static double CalculateWidth(Point leftUpper, Point rightLower)
         {
@@ -48,6 +48,6 @@ namespace Epam.HomeWork.ClassTask
         {
             return leftUpper.X < rightLower.X
                 && leftUpper.Y > rightLower.Y;
-        }      
+        }
     }
 }

@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace Epam.HomeWork.ClassTask
+namespace Epam.HomeWork.Training1
 {
     public class Rectangle
     {
         #region Fields
-         
+
         private const string CONSTRUCTION_ERROR_MESSAGE = "Invalid points for constructing a rectangle!";
         private Point _leftUpper;
         private Point _rightLower;
@@ -28,9 +28,9 @@ namespace Epam.HomeWork.ClassTask
         public Rectangle(double leftUpperX, double leftUpperY,
                          double rightLowerX, double rightLowerY)
             : this(new Point(leftUpperX, leftUpperY), new Point(rightLowerX, rightLowerY)) { }
-               
 
-        #endregion 
+
+        #endregion
 
 
         #region Properties
@@ -40,7 +40,7 @@ namespace Epam.HomeWork.ClassTask
             get => _leftUpper;
             set
             {
-                if(!IsPossibleRectangle(value, _rightLower))
+                if (!IsPossibleRectangle(value, _rightLower))
                 {
                     throw new ArgumentException(CONSTRUCTION_ERROR_MESSAGE);
                 }
@@ -48,7 +48,7 @@ namespace Epam.HomeWork.ClassTask
             }
         }
 
-        public Point RightLower 
+        public Point RightLower
         {
             get => _rightLower;
             set
@@ -83,12 +83,12 @@ namespace Epam.HomeWork.ClassTask
 
         public double CalculatePerimeter()
         {
-            return 2 * (Height + Width); 
+            return 2 * (Height + Width);
         }
 
-        private static bool IsPossibleRectangle(Point leftUpper, Point rightLower) 
+        private static bool IsPossibleRectangle(Point leftUpper, Point rightLower)
         {
-            return leftUpper.X < rightLower.X 
+            return leftUpper.X < rightLower.X
                 && leftUpper.Y > rightLower.Y;
         }
         #endregion
