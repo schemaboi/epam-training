@@ -1,4 +1,4 @@
-﻿namespace Epam.HomeWork.Training1.Tests
+﻿namespace Epam.HomeWork.Training_1.Tests
 {
     using Xunit;
 
@@ -10,9 +10,9 @@
         public void CalculatesArea()
         {
             const double Radius = 3;
-            const double ExpectedArea = Task4.Circle.PI * Radius * Radius;
+            const double ExpectedArea = Task_4.Circle.PI * Radius * Radius;
 
-            double actualArea = Task4.Circle.CalculateArea(Radius);
+            double actualArea = Task_4.Circle.CalculateArea(Radius);
 
             Assert.Equal(ExpectedArea, actualArea, PRECISION);
         }
@@ -21,9 +21,9 @@
         public void CalculatesLength()
         {
             const double Radius = 3;
-            const double ExpectedLength = 2 * Task4.Circle.PI * Radius;
+            const double ExpectedLength = 2 * Task_4.Circle.PI * Radius;
 
-            double actualLength = Task4.Circle.CalculateLength(Radius);
+            double actualLength = Task_4.Circle.CalculateLength(Radius);
 
             Assert.Equal(ExpectedLength, actualLength, PRECISION);
         }

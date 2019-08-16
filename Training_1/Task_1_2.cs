@@ -1,4 +1,4 @@
-﻿namespace Epam.HomeWork.Training1
+﻿namespace Epam.HomeWork.Training_1
 {
     using System;
 
@@ -14,7 +14,7 @@
 
         #region Constructors
 
-        public Rectangle(Point leftUpper, Point rightLower)
+        public Rectangle(Point leftUpper = default, Point rightLower = default)
         {
             if (!IsPossibleRectangle(leftUpper, rightLower))
             {
@@ -102,8 +102,8 @@
 
         private static bool IsPossibleRectangle(Point leftUpper, Point rightLower)
         {
-            return leftUpper.X < rightLower.X
-                && leftUpper.Y > rightLower.Y;
+            return leftUpper.X <= rightLower.X
+                && leftUpper.Y >= rightLower.Y;
         }
         #endregion
     }

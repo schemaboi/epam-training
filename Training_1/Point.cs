@@ -1,4 +1,4 @@
-﻿namespace Epam.HomeWork.Training1
+﻿namespace Epam.HomeWork.Training_1
 {
     public struct Point
     {

@@ -1,4 +1,4 @@
-﻿namespace Epam.HomeWork.Training1.Task4
+﻿namespace Epam.HomeWork.Training_1.Task_4
 {
     using System;
 

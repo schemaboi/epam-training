@@ -1,4 +1,4 @@
-﻿namespace Epam.HomeWork.Training1.Tests
+﻿namespace Epam.HomeWork.Training_1.Tests
 {
     using Xunit;
 
