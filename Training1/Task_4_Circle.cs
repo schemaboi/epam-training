@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Epam.HomeWork.Training1
+namespace Epam.HomeWork.Training1.Task4
 {
-    public static class StaticCircle
+    public static class Circle 
     {
         public const double PI = 3.14159265359;
 

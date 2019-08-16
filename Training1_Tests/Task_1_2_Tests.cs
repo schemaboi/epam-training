@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Epam.HomeWork.Training1.Tests
 {
-    public class RectangleTest
+    public class Task_1_2_Tests 
     { 
         private const int PRECISION = 15;
 

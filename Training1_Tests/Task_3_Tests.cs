@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Epam.HomeWork.Training1.Tests 
 {
-    public class CircleTest
+    public class Task_3_Tests
     {
         private const int PRECISION = 15;
 

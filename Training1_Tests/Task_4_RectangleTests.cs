@@ -3,8 +3,8 @@ using Xunit;
 
 namespace Epam.HomeWork.Training1.Tests
 {
-    public class StaticRectangleTest
-    {
+    public class Task_4_RectangleTests 
+    { 
         private const int PRECISION = 15;
 
         [Fact] 
@@ -14,7 +14,7 @@ namespace Epam.HomeWork.Training1.Tests
             var rightLower = new Point(2, 0);
             const double expectedArea = 4;
 
-            double actualArea = StaticRectangle.CalculateArea(leftUpper, rightLower);
+            double actualArea = Task4.Rectangle.CalculateArea(leftUpper, rightLower);
 
             Assert.Equal(expectedArea, actualArea, PRECISION);
         }
@@ -26,7 +26,7 @@ namespace Epam.HomeWork.Training1.Tests
             var rightLower = new Point(2, 0);
             const double expectedPerimeter = 8; 
 
-            double actualPerimeter = StaticRectangle.CalculatePerimeter(leftUpper, rightLower);
+            double actualPerimeter = Task4.Rectangle.CalculatePerimeter(leftUpper, rightLower);
 
             Assert.Equal(expectedPerimeter, actualPerimeter, PRECISION);
         }
@@ -39,8 +39,8 @@ namespace Epam.HomeWork.Training1.Tests
             const double expectedHeight = 3;
             const double expectedWidth = 2;
 
-            double actualHeight = StaticRectangle.CalculateHeight(leftUpper, rightLower);
-            double actualWidth = StaticRectangle.CalculateWidth(leftUpper, rightLower);
+            double actualHeight = Task4.Rectangle.CalculateHeight(leftUpper, rightLower);
+            double actualWidth = Task4.Rectangle.CalculateWidth(leftUpper, rightLower);
 
             Assert.Equal(actualHeight, expectedHeight, PRECISION);
             Assert.Equal(actualWidth, expectedWidth, PRECISION);
@@ -64,27 +64,27 @@ namespace Epam.HomeWork.Training1.Tests
         {
             var leftUpper = new Point(7, 3);
             var rightLower = new Point(0, 5);
-            double actualHeight = StaticRectangle.CalculateHeight(leftUpper, rightLower);
+            double actualHeight = Task4.Rectangle.CalculateHeight(leftUpper, rightLower);
         }
 
         private void PassesInvalidArgumentsToCalculateWidth()
         {
             var leftUpper = new Point(7, 3);
             var rightLower = new Point(0, 5);
-            double actualWidth = StaticRectangle.CalculateWidth(leftUpper, rightLower);
+            double actualWidth = Task4.Rectangle.CalculateWidth(leftUpper, rightLower);
         }
 
         private void PassesInvalidArgumentsToCalculateArea()
         {
             var leftUpper = new Point(7, 3); 
             var rightLower = new Point(0, 5);
-            double actualArea = StaticRectangle.CalculateArea(leftUpper, rightLower);
+            double actualArea = Task4.Rectangle.CalculateArea(leftUpper, rightLower);
         }
         private void PassesInvalidArgumentsToCalculatePerimeter()
         {
             var leftUpper = new Point(7, 3);
             var rightLower = new Point(0, 5);
-            double actualPerimeter = StaticRectangle.CalculatePerimeter(leftUpper, rightLower);
+            double actualPerimeter = Task4.Rectangle.CalculatePerimeter(leftUpper, rightLower);
         }
     }
 }

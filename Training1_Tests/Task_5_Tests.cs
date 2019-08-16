@@ -3,11 +3,11 @@ using Xunit;
 
 namespace Epam.HomeWork.Training1.Tests
 { 
-    public class ComplexNumberTest
+    public class Task_5_Tests
     {
         [Fact]
         public void CalculatesSimpleAriphmetic()
-        {
+        { 
             var leftComplexNumber = new ComplexNumber(2, 2);
             var rightComplexNumber = new ComplexNumber(2, 3);
 
