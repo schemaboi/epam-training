@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Epam.HomeWork.Training2.Task3
+namespace Epam.HomeWork.Training_2.Task_4
 {
-    public class Figure
+    public class Figure : IDrawable
     {
         public Figure(double x, double y)
         {
@@ -13,9 +13,12 @@ namespace Epam.HomeWork.Training2.Task3
         public double X { get; }
         public double Y { get; }
 
-        public virtual void Draw()
+
+        public virtual string Draw()
         {
-            Console.WriteLine(GetType().Name);
+            var name = GetType().Name;
+            Console.WriteLine(name);
+            return name;
         }
     }
 }

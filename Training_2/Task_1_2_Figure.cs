@@ -1,5 +1,5 @@
 ﻿
-namespace Epam.HomeWork.Training2.Task1_2
+namespace Epam.HomeWork.Training_2.Task_1_2
 {
     public abstract class Figure 
     {
@@ -12,6 +12,6 @@ namespace Epam.HomeWork.Training2.Task1_2
         public double X { get; }
         public double Y { get; }
 
-        public abstract void Draw();
+        public abstract string Draw();
     }
 }
