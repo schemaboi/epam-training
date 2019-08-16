@@ -71,6 +71,16 @@ namespace Epam.HomeWork.Training1
             get => _rightLower.X - _leftUpper.X;
         }
 
+        public double Area
+        {
+            get => Height * Width;
+        }
+
+        public double Perimeter
+        {
+            get => 2 * (Height + Width);
+        }
+
         #endregion
 
 
