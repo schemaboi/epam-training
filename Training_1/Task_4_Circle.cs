@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Epam.HomeWork.Training1.Task4
+﻿namespace Epam.HomeWork.Training1.Task4
 {
+    using System;
+
     public static class Circle 
     {
         public const double PI = 3.14159265359;
@@ -9,7 +9,9 @@ namespace Epam.HomeWork.Training1.Task4
         public static double CalculateArea(double radius)
         {
             if (radius < 0)
+            {
                 throw new ArgumentException("Negative radius!");
+            }
 
             return PI * radius * radius;
         }
@@ -17,7 +19,9 @@ namespace Epam.HomeWork.Training1.Task4
         public static double CalculateLength(double radius)
         {
             if (radius < 0)
+            {
                 throw new ArgumentException("Negative radius!");
+            }
 
             return 2 * PI * radius;
         }

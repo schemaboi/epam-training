@@ -1,5 +1,4 @@
-﻿
-namespace Epam.HomeWork.Training1
+﻿namespace Epam.HomeWork.Training1
 {
     public struct Point
     {
@@ -10,6 +9,7 @@ namespace Epam.HomeWork.Training1
         }
 
         public double X { get; set; }
+
         public double Y { get; set; }
     }
 }

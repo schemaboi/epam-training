@@ -1,7 +1,7 @@
-﻿using System;
+﻿namespace Epam.HomeWork.Training1
+{
+    using System;
 
-namespace Epam.HomeWork.Training1
-{ 
     public class Circle
     {
         public const double PI = 3.14159265359;
@@ -18,17 +18,20 @@ namespace Epam.HomeWork.Training1
             {
                 return _radius;
             }
+
             set
             {
                 if (value < 0)
+                {
                     throw new ArgumentException("Negative radius!");
+                }
 
                 _radius = value;
             }
         }
 
         public double Area { get => PI * Radius * Radius; }
-        public double Length { get => 2 * PI * Radius; }
 
+        public double Length { get => 2 * PI * Radius; }
     }
 }

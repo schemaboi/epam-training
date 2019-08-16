@@ -1,9 +1,7 @@
-﻿using System;
-using Xunit;
-
-
-namespace Epam.HomeWork.Training1.Tests 
+﻿namespace Epam.HomeWork.Training1.Tests
 {
+    using Xunit;
+
     public class Task_3_Tests
     {
         private const int PRECISION = 15;
@@ -11,31 +9,31 @@ namespace Epam.HomeWork.Training1.Tests
         [Fact]
         public void CalculatesArea()
         {
-            const double radius = 3;
+            const double Radius = 3;
             var circle = new Circle
             {
-                Radius = radius
+                Radius = Radius
             };
-            const double expectedArea = Circle.PI * radius * radius;
+            const double ExpectedArea = Circle.PI * Radius * Radius;
 
             double actualArea = circle.Area;
 
-            Assert.Equal(expectedArea, actualArea, PRECISION);
+            Assert.Equal(ExpectedArea, actualArea, PRECISION);
         }
 
         [Fact]
         public void CalculatesLength()
         {
-            const double radius = 3;
+            const double Radius = 3;
             var circle = new Circle
             {
-                Radius = radius
+                Radius = Radius
             };
-            const double expectedLength = 2 * Circle.PI * radius;
+            const double ExpectedLength = 2 * Circle.PI * Radius;
 
             double actualLength = circle.Length;
 
-            Assert.Equal(expectedLength, actualLength, PRECISION);
+            Assert.Equal(ExpectedLength, actualLength, PRECISION);
         }
     }
 }

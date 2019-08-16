@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Epam.HomeWork.Training1
+﻿namespace Epam.HomeWork.Training1
 {
+    using System;
+
     public struct ComplexNumber : IEquatable<ComplexNumber>
     {
         public ComplexNumber(double real = 0.0, double imaginary = 0.0)
@@ -22,6 +22,7 @@ namespace Epam.HomeWork.Training1
         #region Properties
 
         public double Real { get; }
+
         public double Imaginary { get; }
 
         #endregion
@@ -45,8 +46,9 @@ namespace Epam.HomeWork.Training1
 
         public static ComplexNumber operator *(ComplexNumber left, ComplexNumber right)
         {
-            return new ComplexNumber(left.Real * right.Real - left.Imaginary * right.Imaginary,
-                                     left.Real * right.Imaginary + left.Imaginary * right.Real);
+            return new ComplexNumber(
+                left.Real * right.Real - left.Imaginary * right.Imaginary,
+                left.Real * right.Imaginary + left.Imaginary * right.Real);
         }
 
         public static ComplexNumber operator /(ComplexNumber left, ComplexNumber right)
@@ -78,7 +80,6 @@ namespace Epam.HomeWork.Training1
         public static implicit operator ComplexNumber(double value)
             => new ComplexNumber(value);
 
-
         #endregion
 
         #region Methods
@@ -90,6 +91,7 @@ namespace Epam.HomeWork.Training1
             {
                 throw new DivideByZeroException("Division by zero in ComplexNumber.Invert()");
             }
+
             return new ComplexNumber(Real / denominator, -Imaginary / denominator);
         }
 

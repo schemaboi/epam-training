@@ -1,9 +1,9 @@
-using NUnit.Framework;
-
 namespace Epam.HomeWork.Training_2.Tests 
 {
+    using NUnit.Framework;
     using Task_1_2;
-    public class Task_1_2_Tests  
+
+    public class Task_1_2_Tests
     {    
         [Test]
         public void RectangleShouldDraw()

@@ -1,5 +1,4 @@
-﻿
-namespace Epam.HomeWork.Training_2
+﻿namespace Epam.HomeWork.Training_2
 {
     public interface IDrawable
     {

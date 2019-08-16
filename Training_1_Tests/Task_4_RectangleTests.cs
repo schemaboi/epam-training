@@ -1,8 +1,8 @@
-﻿using System;
-using Xunit;
-
-namespace Epam.HomeWork.Training1.Tests
+﻿namespace Epam.HomeWork.Training1.Tests
 {
+    using System;
+    using Xunit;
+
     public class Task_4_RectangleTests 
     { 
         private const int PRECISION = 15;
@@ -12,11 +12,11 @@ namespace Epam.HomeWork.Training1.Tests
         {
             var leftUpper = new Point(0, 2);
             var rightLower = new Point(2, 0);
-            const double expectedArea = 4;
+            const double ExpectedArea = 4;
 
             double actualArea = Task4.Rectangle.CalculateArea(leftUpper, rightLower);
 
-            Assert.Equal(expectedArea, actualArea, PRECISION);
+            Assert.Equal(ExpectedArea, actualArea, PRECISION);
         }
 
         [Fact]
@@ -24,11 +24,11 @@ namespace Epam.HomeWork.Training1.Tests
         {
             var leftUpper = new Point(0, 2);
             var rightLower = new Point(2, 0);
-            const double expectedPerimeter = 8; 
+            const double ExpectedPerimeter = 8; 
 
             double actualPerimeter = Task4.Rectangle.CalculatePerimeter(leftUpper, rightLower);
 
-            Assert.Equal(expectedPerimeter, actualPerimeter, PRECISION);
+            Assert.Equal(ExpectedPerimeter, actualPerimeter, PRECISION);
         }
 
         [Fact]
@@ -36,23 +36,23 @@ namespace Epam.HomeWork.Training1.Tests
         {
             var leftUpper = new Point(0, 3);
             var rightLower = new Point(2, 0);
-            const double expectedHeight = 3;
-            const double expectedWidth = 2;
+            const double ExpectedHeight = 3;
+            const double ExpectedWidth = 2;
 
             double actualHeight = Task4.Rectangle.CalculateHeight(leftUpper, rightLower);
             double actualWidth = Task4.Rectangle.CalculateWidth(leftUpper, rightLower);
 
-            Assert.Equal(actualHeight, expectedHeight, PRECISION);
-            Assert.Equal(actualWidth, expectedWidth, PRECISION);
+            Assert.Equal(actualHeight, ExpectedHeight, PRECISION);
+            Assert.Equal(actualWidth, ExpectedWidth, PRECISION);
         }
 
         [Fact]
         public void HandlesInvalidArguments() 
         {
-            Action calculateHeightCode = PassesInvalidArgumentsToCalculateHeight;
-            Action calculateWidthCode = PassesInvalidArgumentsToCalculateWidth;
-            Action calculateAreaCode = PassesInvalidArgumentsToCalculateArea;
-            Action calculatePerimetrCode = PassesInvalidArgumentsToCalculatePerimeter;
+            Action calculateHeightCode = this.PassesInvalidArgumentsToCalculateHeight;
+            Action calculateWidthCode = this.PassesInvalidArgumentsToCalculateWidth;
+            Action calculateAreaCode = this.PassesInvalidArgumentsToCalculateArea;
+            Action calculatePerimetrCode = this.PassesInvalidArgumentsToCalculatePerimeter;
              
             Assert.Throws<ArgumentException>(calculateHeightCode);
             Assert.Throws<ArgumentException>(calculateWidthCode);
@@ -80,6 +80,7 @@ namespace Epam.HomeWork.Training1.Tests
             var rightLower = new Point(0, 5);
             double actualArea = Task4.Rectangle.CalculateArea(leftUpper, rightLower);
         }
+
         private void PassesInvalidArgumentsToCalculatePerimeter()
         {
             var leftUpper = new Point(7, 3);

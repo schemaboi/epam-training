@@ -1,8 +1,8 @@
-using NUnit.Framework;
-
 namespace Epam.HomeWork.Training_2.Tests 
 {
+    using NUnit.Framework;
     using Task_3; 
+
     public class Task_3_Tests  
     {     
         [Test]

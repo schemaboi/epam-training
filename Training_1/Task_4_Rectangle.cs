@@ -1,16 +1,18 @@
-﻿using System;
-
-namespace Epam.HomeWork.Training1.Task4
+﻿namespace Epam.HomeWork.Training1.Task4
 {
+    using System;
+
     public static class Rectangle
     {
-        public const string BAD_ARGUMENTS_ERROR = "Invalid points for a rectangle!";
+        public const string BadArgumentsErrorStr = "Invalid points for a rectangle!";
+
         public static double CalculateArea(Point leftUpper, Point rightLower)
         {
             if (!IsPossibleRectangle(leftUpper, rightLower))
             {
-                throw new ArgumentException(BAD_ARGUMENTS_ERROR);
+                throw new ArgumentException(BadArgumentsErrorStr);
             }
+
             return CalculateHeight(leftUpper, rightLower)
                 * CalculateWidth(leftUpper, rightLower);
         }
@@ -19,8 +21,9 @@ namespace Epam.HomeWork.Training1.Task4
         {
             if (!IsPossibleRectangle(leftUpper, rightLower))
             {
-                throw new ArgumentException(BAD_ARGUMENTS_ERROR);
+                throw new ArgumentException(BadArgumentsErrorStr);
             }
+
             return 2 * (CalculateHeight(leftUpper, rightLower)
                 + CalculateWidth(leftUpper, rightLower));
         }
@@ -29,8 +32,9 @@ namespace Epam.HomeWork.Training1.Task4
         {
             if (!IsPossibleRectangle(leftUpper, rightLower))
             {
-                throw new ArgumentException(BAD_ARGUMENTS_ERROR);
+                throw new ArgumentException(BadArgumentsErrorStr);
             }
+
             return leftUpper.Y - rightLower.Y;
         }
 
@@ -38,8 +42,9 @@ namespace Epam.HomeWork.Training1.Task4
         {
             if (!IsPossibleRectangle(leftUpper, rightLower))
             {
-                throw new ArgumentException(BAD_ARGUMENTS_ERROR);
+                throw new ArgumentException(BadArgumentsErrorStr);
             }
+
             return rightLower.X - leftUpper.X;
         }
 

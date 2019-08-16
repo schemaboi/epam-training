@@ -1,8 +1,8 @@
-using System;
-using Xunit;
-
 namespace Epam.HomeWork.Training1.Tests
 {
+    using System;
+    using Xunit;
+
     public class Task_1_2_Tests 
     { 
         private const int PRECISION = 15;
@@ -13,12 +13,12 @@ namespace Epam.HomeWork.Training1.Tests
             var leftUpper = new Point(0, 2);
             var rightLower = new Point(2, 0);
             var rectangle = new Rectangle(leftUpper, rightLower);
-            const double expectedArea = 4;
+            const double ExpectedArea = 4;
 
             double actualArea = rectangle.CalculateArea();
 
-            Assert.Equal(expectedArea, actualArea, PRECISION);
-            Assert.Equal(expectedArea, rectangle.Area, PRECISION);
+            Assert.Equal(ExpectedArea, actualArea, PRECISION);
+            Assert.Equal(ExpectedArea, rectangle.Area, PRECISION);
         }
 
         [Fact]
@@ -27,12 +27,12 @@ namespace Epam.HomeWork.Training1.Tests
             var leftUpper = new Point(0, 2);
             var rightLower = new Point(2, 0);
             var rectangle = new Rectangle(leftUpper, rightLower);
-            const double expectedPerimeter = 8;
+            const double ExpectedPerimeter = 8;
 
             double actualPerimeter = rectangle.CalculatePerimeter();
 
-            Assert.Equal(expectedPerimeter, actualPerimeter, PRECISION);
-            Assert.Equal(expectedPerimeter, rectangle.Perimeter, PRECISION);
+            Assert.Equal(ExpectedPerimeter, actualPerimeter, PRECISION);
+            Assert.Equal(ExpectedPerimeter, rectangle.Perimeter, PRECISION);
         }
 
         [Fact]
@@ -41,14 +41,14 @@ namespace Epam.HomeWork.Training1.Tests
             var leftUpper = new Point(0, 2);
             var rightLower = new Point(2, 0);
             var rectangle = new Rectangle(leftUpper, rightLower);
-            const double expectedHeight = 2;
-            const double expectedWidth = 2;
+            const double ExpectedHeight = 2;
+            const double ExpectedWidth = 2;
 
             double actualHeight = rectangle.Height;
             double actualWidth = rectangle.Width;
 
-            Assert.Equal(actualHeight, expectedHeight, PRECISION);
-            Assert.Equal(actualWidth, expectedWidth, PRECISION);
+            Assert.Equal(actualHeight, ExpectedHeight, PRECISION);
+            Assert.Equal(actualWidth, ExpectedWidth, PRECISION);
         }
 
         [Fact]

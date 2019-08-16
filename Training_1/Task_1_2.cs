@@ -1,17 +1,16 @@
-﻿using System;
-
-namespace Epam.HomeWork.Training1
+﻿namespace Epam.HomeWork.Training1
 {
+    using System;
+
     public class Rectangle
     {
         #region Fields
 
-        private const string CONSTRUCTION_ERROR_MESSAGE = "Invalid points for constructing a rectangle!";
+        private const string InvalidArgumentsErrorDesciption = "Invalid points for constructing a rectangle!";
         private Point _leftUpper;
         private Point _rightLower;
 
         #endregion
-
 
         #region Constructors
 
@@ -19,19 +18,23 @@ namespace Epam.HomeWork.Training1
         {
             if (!IsPossibleRectangle(leftUpper, rightLower))
             {
-                throw new ArgumentException(CONSTRUCTION_ERROR_MESSAGE);
+                throw new ArgumentException(InvalidArgumentsErrorDesciption);
             }
+
             _leftUpper = leftUpper;
             _rightLower = rightLower;
         }
 
-        public Rectangle(double leftUpperX, double leftUpperY,
-                         double rightLowerX, double rightLowerY)
-            : this(new Point(leftUpperX, leftUpperY), new Point(rightLowerX, rightLowerY)) { }
-
+        public Rectangle(
+            double leftUpperX, 
+            double leftUpperY,
+            double rightLowerX, 
+            double rightLowerY)
+            : this(new Point(leftUpperX, leftUpperY), new Point(rightLowerX, rightLowerY))
+        {
+        }
 
         #endregion
-
 
         #region Properties
 
@@ -42,8 +45,9 @@ namespace Epam.HomeWork.Training1
             {
                 if (!IsPossibleRectangle(value, _rightLower))
                 {
-                    throw new ArgumentException(CONSTRUCTION_ERROR_MESSAGE);
+                    throw new ArgumentException(InvalidArgumentsErrorDesciption);
                 }
+
                 _leftUpper = value;
             }
         }
@@ -55,8 +59,9 @@ namespace Epam.HomeWork.Training1
             {
                 if (!IsPossibleRectangle(_leftUpper, value))
                 {
-                    throw new ArgumentException(CONSTRUCTION_ERROR_MESSAGE);
+                    throw new ArgumentException(InvalidArgumentsErrorDesciption);
                 }
+
                 _rightLower = value;
             }
         }
@@ -82,7 +87,6 @@ namespace Epam.HomeWork.Training1
         }
 
         #endregion
-
 
         #region Methods
 

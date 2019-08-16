@@ -1,12 +1,11 @@
-﻿using System;
-
-namespace Epam.HomeWork.Training_2.Task_1_2
+﻿namespace Epam.HomeWork.Training_2.Task_1_2
 {
+    using System;
+
     public class Square : Figure
     {
         public Square(double x, double y) : base(x, y)
         {
-
         }
 
         public override string Draw()

@@ -1,8 +1,8 @@
-﻿using System;
-using Xunit;
+﻿namespace Epam.HomeWork.Training1.Tests
+{
+    using System;
+    using Xunit;
 
-namespace Epam.HomeWork.Training1.Tests
-{ 
     public class Task_5_Tests
     {
         [Fact]
@@ -14,7 +14,7 @@ namespace Epam.HomeWork.Training1.Tests
             var expectedSum = new ComplexNumber(4, 5);
             var expectedDiffrence = new ComplexNumber(0, -1);
             var expectedProduct = new ComplexNumber(-2, 10);
-            var expectedQuotient = new ComplexNumber(10.0/13.0, -2.0/13.0);
+            var expectedQuotient = new ComplexNumber(10.0 / 13.0, -2.0 / 13.0);
             var expectedNegated = new ComplexNumber(-2, -2);
 
             var actualSum = leftComplexNumber + rightComplexNumber;

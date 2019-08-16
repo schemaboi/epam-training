@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Epam.HomeWork.Training_2.Task_4
+﻿namespace Epam.HomeWork.Training_2.Task_4
 {
+    using System;
+
     public class Rectangle : Figure
     {
         public Rectangle(double x, double y) : base(x, y)
