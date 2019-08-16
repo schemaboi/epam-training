@@ -18,6 +18,7 @@ namespace Epam.HomeWork.Training1.Tests
             double actualArea = rectangle.CalculateArea();
 
             Assert.Equal(expectedArea, actualArea, PRECISION);
+            Assert.Equal(expectedArea, rectangle.Area, PRECISION);
         }
 
         [Fact]
@@ -28,9 +29,10 @@ namespace Epam.HomeWork.Training1.Tests
             var rectangle = new Rectangle(leftUpper, rightLower);
             const double expectedPerimeter = 8;
 
-            double actualArea = rectangle.CalculatePerimeter();
+            double actualPerimeter = rectangle.CalculatePerimeter();
 
-            Assert.Equal(expectedPerimeter, actualArea, PRECISION);
+            Assert.Equal(expectedPerimeter, actualPerimeter, PRECISION);
+            Assert.Equal(expectedPerimeter, rectangle.Perimeter, PRECISION);
         }
 
         [Fact]
