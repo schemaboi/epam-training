@@ -1,13 +1,12 @@
 ﻿namespace Epam.HomeWork
 {
-    using System;
     using System.Collections.Generic;
 
     public static class Program
     {
         static void Main(string[] args) 
         {
-            var tasks = new List<IRunable>
+            var tasks = new List<TaskRunner>
             {
                 new FirstTrainingTaskRunner(),
                 new SecondTrainingTaskRunner()
