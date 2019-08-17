@@ -3,9 +3,9 @@
     using System;
     using Training_1;
 
-    public class FirstTrainingTaskRunner : TaskRunner, IRunable
+    public class FirstTrainingTaskRunner : TaskRunner
     {
-        public void Run()
+        public override void Run()
         {
             WriteHeaderMessage("Training 1");
             Console.WriteLine();
@@ -39,7 +39,7 @@
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                Console.WriteLine($"{GetCurrentMethod()} error!");
+                Console.WriteLine("RunTask() error!");
                 return;
             }
 
@@ -66,7 +66,7 @@
             catch(Exception e)
             {
                 Console.WriteLine(e.Message);
-                Console.WriteLine($"{GetCurrentMethod()} error!");
+                Console.WriteLine("RunTask() error!");
                 return;
             }
             
@@ -83,7 +83,8 @@
             Console.Write("Enter radius: ");
             if(!double.TryParse(Console.ReadLine(), out double radius))
             {
-                Console.WriteLine($"{GetCurrentMethod()} error: Invalid input!");
+                Console.WriteLine("RunTask() error!");
+                return;
             }
 
             Console.WriteLine($"Circle radius: {radius}, " +
@@ -111,7 +112,7 @@
             catch(Exception e)
             {
                 Console.WriteLine(e.Message);
-                Console.WriteLine($"{GetCurrentMethod()} error!");
+                Console.WriteLine("RunTask() error!");
             }
            
         }
