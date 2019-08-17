@@ -10,7 +10,7 @@ namespace Epam.HomeWork.Training_2.Tests
         {
             IDrawable figure = new Figure(0, 0);
 
-            Assert.AreEqual("Figure", figure.Draw());
+            Assert.AreEqual("Figure: [0;0]", figure.Draw());
         }
 
         [Test]
@@ -18,7 +18,7 @@ namespace Epam.HomeWork.Training_2.Tests
         {
             IDrawable rect = new Rectangle(0, 0);
 
-            Assert.AreEqual("Rectangle", rect.Draw());
+            Assert.AreEqual("Rectangle: [0;0]", rect.Draw());
         }
 
         [Test]
@@ -26,7 +26,7 @@ namespace Epam.HomeWork.Training_2.Tests
         {
             IDrawable square = new Square(0, 0);
 
-            Assert.AreEqual("Square", square.Draw());
+            Assert.AreEqual("Square: [0;0]", square.Draw());
         }
     }
 }
