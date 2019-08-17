@@ -1,19 +1,15 @@
 ﻿namespace Epam.HomeWork
 {
     using System;
-    using System.Diagnostics;
-    using System.Runtime.CompilerServices;
 
-    public class TaskRunner
+    public abstract class TaskRunner
     {
-        [MethodImpl(MethodImplOptions.NoInlining)]
-        public static string GetCurrentMethod()
-        {
-            var st = new StackTrace();
-            var sf = st.GetFrame(1);
 
-            return sf.GetMethod().Name;
+        protected TaskRunner()
+        {
         }
+
+        public abstract void Run();
 
         public static void ConsolePause()
         {
