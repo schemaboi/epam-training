@@ -1,7 +1,5 @@
 ﻿namespace Epam.HomeWork.Training_2.Task_4
 {
-    using System;
-
     public class Figure : IDrawable
     {
         public Figure(double x, double y)
@@ -16,9 +14,7 @@
 
         public virtual string Draw()
         {
-            var name = GetType().Name;
-            Console.WriteLine(name);
-            return name;
+            return $"{GetType().Name}: [{X};{Y}]";
         }
     }
 }
