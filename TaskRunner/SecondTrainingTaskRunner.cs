@@ -77,13 +77,17 @@
                 new Training_2.Task_4.Square(9, 5),
                 new Training_2.Task_4.Square(9, 5)
             };
+            PrintDrawables(drawableFigures);
+        }
 
+        private static void PrintDrawables(params Training_2.IDrawable[] drawableFigures)
+        {
             foreach (var figure in drawableFigures)
             {
                 Console.WriteLine(figure.Draw());
             }
         }
-        
+
         #endregion
     }
 }
