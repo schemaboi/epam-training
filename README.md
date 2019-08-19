@@ -1,5 +1,4 @@
-# epam-training
-Epam Training Homework
+# Epam Training Homework
 
 - Task 1
 
@@ -31,4 +30,8 @@ Figure) в яких перегружена імплементація метод
 IDrawable[] array) в який передати об'єкти створених класів і в циклі викликати метод Draw() для кожного з них.
 Переконатись що були викликані коректні реалізації методу Draw() для кожного з класів.
 
-* Вхідні параметри отримувати з консолі. Приклади роботи розроблених класів та їх методів вивести на консоль.
+# Projects
+
+- TaskRunner
+- Training_1 (also unit test projects)
+- Training_2 (also unit test projects)
