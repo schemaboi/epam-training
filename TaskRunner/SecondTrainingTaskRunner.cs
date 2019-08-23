@@ -6,17 +6,18 @@
     {
         public override void Run()
         {
-            WriteHeaderMessage("Training 1");
-            Console.WriteLine();
+            WriteHeaderMessage("Training 2");
+            ConsolePause();
 
             RunTask1();
-            Console.WriteLine();
+            ConsolePause();
 
             RunTask3();
-            Console.WriteLine();
+            ConsolePause();
 
             RunTask4();
-            Console.WriteLine();
+            ConsolePause();
+            Console.Clear();
         }
 
         #region RunTask methods
@@ -65,7 +66,7 @@
         public void RunTask4()
         {
             const int FiguresArraySize = 6;
-            WriteHeaderMessage(">> Task 3: Figure class ( w/ virtual method Draw() " +
+            WriteHeaderMessage(">> Task 4: Figure class ( w/ virtual method Draw() " +
                 "implementing IDrawable ) and Rectangle, Square child classes\n");
 
             var drawableFigures = new Training_2.IDrawable[FiguresArraySize]

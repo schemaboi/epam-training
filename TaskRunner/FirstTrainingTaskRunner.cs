@@ -11,16 +11,17 @@
             Console.WriteLine();
 
             RunTask1();
-            Console.WriteLine();
+            ConsolePause();
 
             RunTask3();
-            Console.WriteLine();
+            ConsolePause();
 
             RunTask4();
-            Console.WriteLine();
+            ConsolePause();
 
             RunTask5();
-            Console.WriteLine();
+            ConsolePause();
+            Console.Clear();
         }
 
         #region RunTask methods
