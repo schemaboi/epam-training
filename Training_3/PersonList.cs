@@ -6,7 +6,7 @@
 
     public sealed class PeopleList : IEnumerable<Person>, ICloneable
     {
-        private List<Person> peopleList;
+        private readonly List<Person> peopleList;
 
         #region Constructors
 

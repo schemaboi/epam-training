@@ -50,19 +50,19 @@
                 new Person("Svyatik", 19,
                     new List<ContactNumber>
                         {
-                            new ContactNumber("Pavlo", "+380974598784"),
-                            new ContactNumber("Sergii", "+380937896457"),
-                            new ContactNumber("Nastya", "+380954884137"),
-                            new ContactNumber("Mike", "+380974548846")
+                            new ContactNumber("Vasyl", "+380974598784"),
+                            new ContactNumber("Maksym", "+380937896497"),
+                            new ContactNumber("Volodya", "+380854884137"),
+                            new ContactNumber("Oksana", "+380914548846")
                         }),
 
                 new Person("Andrew", 20,
                     new List<ContactNumber>
                         {
-                            new ContactNumber("Pavlo", "+380974598784"),
-                            new ContactNumber("Sergii", "+380937896457"),
-                            new ContactNumber("Nastya", "+380954884137"),
-                            new ContactNumber("Mike", "+380974548846")
+                            new ContactNumber("Olena", "+380974593384"),
+                            new ContactNumber("Petro", "+387937896457"),
+                            new ContactNumber("Ruslan", "+383354884137"),
+                            new ContactNumber("Antypko", "+380974548841")
                         })
             });
 
@@ -134,43 +134,43 @@
 
         private void InitList()
         {
+            var pavloNum = new ContactNumber("Pavlo", "+380974668784");
+            var romanNum = new ContactNumber("Roman", "+3809674522896");
+            var nastyaNum = new ContactNumber("Nastya", "+380978496753");
+            var sergiiNum = new ContactNumber("Sergii", "+380936475951");
+             
             var people = new List<Person>
             {
                 new Person("Roman Moravskyi", 19,
                     new List<ContactNumber>
                     {
-                        new ContactNumber("Pavlo", "+380974598784"),
-                        new ContactNumber("Sergii", "+380937896457"),
-                        new ContactNumber("Nastya", "+380954884137"),
-                        new ContactNumber("Mike", "+380974548846")
+                        pavloNum,
+                        sergiiNum,
+                        nastyaNum
                     }),
-
                 new Person("Anastasia Vasileva", 18,
                     new List<ContactNumber>
                     {
-                        new ContactNumber("Roman", "+380962522749"),
-                        new ContactNumber("Sergii", "+380937896457")
+                        romanNum,
+                        sergiiNum
                     }),
-
                 new Person("Sergii Ivanenko", 19,
                     new List<ContactNumber>
                     {
-                        new ContactNumber("Pavlo", "+380974598784"),
-                        new ContactNumber("Roman", "+380962522749")
+                        pavloNum,
+                        romanNum
                     }),
-
                 new Person("Pavlo Pustelnyk", 19,
                     new List<ContactNumber>
                     {
-                        new ContactNumber("Roman", "+380962522749"),
-                        new ContactNumber("Sergii", "+380937896457")
+                        romanNum,
+                        sergiiNum
                     }),
-
                 new Person("Mykola Morozov", 18,
                     new List<ContactNumber>
                     {
-                        new ContactNumber("Roman", "+380962522749"),
-                        new ContactNumber("Nastya", "+380954884137")
+                        romanNum,
+                        nastyaNum
                     }),
             };
 

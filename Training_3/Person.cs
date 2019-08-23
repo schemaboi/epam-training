@@ -5,7 +5,7 @@
     using System.Collections.Generic;
     using System.Text;
 
-    public class Person : IEquatable<Person>, ICloneable
+    public sealed class Person : IEquatable<Person>, ICloneable
     {
         public Person() : this("", 0, new List<ContactNumber>())
         { }
@@ -35,7 +35,7 @@
 
         #region Properties
 
-        public string Name { get; set; } = "";
+        public string Name { get; set; }
 
         public int Age { get; set; }
 
@@ -62,7 +62,7 @@
 
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            return ToString().GetHashCode();
         }
 
         public override string ToString()
