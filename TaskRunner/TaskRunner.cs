@@ -13,9 +13,8 @@
 
         public static void ConsolePause()
         {
-            Console.WriteLine("Press any key to continue...");
+            Console.Write("\nPress any key to continue...\n");
             Console.ReadLine();
-            Console.Clear();
         }
 
         public static void WriteHeaderMessage(string message)
