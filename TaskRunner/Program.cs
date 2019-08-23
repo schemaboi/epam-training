@@ -9,15 +9,14 @@
             var tasks = new List<TaskRunner>
             {
                 new FirstTrainingTaskRunner(),
-                new SecondTrainingTaskRunner()
+                new SecondTrainingTaskRunner(),
+                new ThirdTrainingTaskRunner()
             };
 
             foreach(var task in tasks)
             {
                 task.Run();
             }
-
-            TaskRunner.ConsolePause();
         }
     }
 }
