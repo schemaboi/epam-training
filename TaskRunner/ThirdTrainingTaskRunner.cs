@@ -78,9 +78,14 @@
 
             List<string> strings = GetRandomStringsWithCapitalLetters(RandomStringsCount, RandomStringLength);
 
-            int removedStringsCount = strings.RemoveAll(s => s.StartsWith('Z'));
+            strings.RemoveAll(s => s.StartsWith('Z'));
 
-            Console.WriteLine($"{removedStringsCount} strings were removed from the list!\n" +
+            var set = new HashSet<string>();
+            set.UnionWith(strings);
+
+            strings = new List<string>(set); 
+
+            Console.WriteLine($"{RandomStringsCount - strings.Count} strings were removed from the list!\n" +
                 $"There are {strings.Count} strings in the list now.\n");
 
             strings.Sort((a, b) => -1 * a.CompareTo(b));
@@ -106,7 +111,7 @@
 
             List<string> strings = GetRandomStringsWithCapitalLetters(RandomStringsCount, RandomStringLength);
              
-            var newStrings = strings.Where(s => !s.StartsWith('Z')).ToList();
+            var newStrings = strings.Where(s => !s.StartsWith('Z')).Distinct().ToList();
 
             Console.WriteLine($"{newStrings.Count} strings were removed from the list!\n" +
                 $"There are {strings.Count} strings in the list now.\n");
