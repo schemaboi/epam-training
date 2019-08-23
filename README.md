@@ -1,5 +1,4 @@
-# epam-training
-Epam Training Homework
+# Epam Training Homework
 
 - Task 1
 
@@ -28,7 +27,11 @@ Figure) в яких перегружена імплементація метод
 класах Square та Rectangle. Переконатись що об'єкт класу Figure тепер може бути ініціалізований і виклики методу Draw()
 на об'єктах створених класів приведуть до виклику трьох різних реалізацій.
 4. Використовуючи попереднє завдання винести метод Draw() у інтерфейс IDrawable. Створити метод DrawAll(params
-IDrawable[] array) в який передати об'єкти створених класів і в циклі викликати метод Draw() для кожного з них.
+IDrawable[] array) в який передати об'єкти створених класів і в циклі викликати метод Draw() для кожного з них **[implemented in TaskRunner/SecondTrainingTaskRunner.cs]**.
 Переконатись що були викликані коректні реалізації методу Draw() для кожного з класів.
 
-* Вхідні параметри отримувати з консолі. Приклади роботи розроблених класів та їх методів вивести на консоль.
+# Projects
+
+- TaskRunner
+- Training_1 (also unit test projects)
+- Training_2 (also unit test projects)
