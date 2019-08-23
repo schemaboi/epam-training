@@ -1,6 +1,7 @@
 ﻿namespace Epam.HomeWork
 {
     using System;
+    using System.Linq;
     using System.Collections.Generic;
     using System.Text;
     using Training_3;
@@ -24,6 +25,9 @@
             ConsolePause();
 
             RunTask3();
+            ConsolePause();
+
+            RunTask3Linq();
             ConsolePause();
             Console.Clear();
         }
@@ -92,6 +96,34 @@
         }
                      
         #endregion
+
+        void RunTask3Linq()
+        {
+            const int RandomStringsCount = 100;
+            const int RandomStringLength = 4;
+
+            WriteHeaderMessage(">> Task 3 with LINQ:\n");
+
+            List<string> strings = GetRandomStringsWithCapitalLetters(RandomStringsCount, RandomStringLength);
+             
+            var newStrings = strings.Where(s => !s.StartsWith('Z')).ToList();
+
+            Console.WriteLine($"{newStrings.Count} strings were removed from the list!\n" +
+                $"There are {strings.Count} strings in the list now.\n");
+
+            newStrings = (from str in newStrings
+                          orderby str descending
+                          select str).ToList();
+
+            Console.Write("Enter page number to be displayed: ");
+            if (!int.TryParse(Console.ReadLine(), out int pageNumber))
+            {
+                Console.WriteLine("Invalid input!");
+                return;
+            }
+
+            DisplayPage(pageNumber, newStrings);
+        }
 
         #region Helper methods
 
