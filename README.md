@@ -50,4 +50,4 @@ pageNumber) при виклику якого на консоль буде вив
 - TaskRunner
 - Training_1 (also unit test projects)
 - Training_2 (also unit test projects)
-- Training_3 (some task implemented in TaskRunner/ThirdTrainingTaskRunner.cs)
+- Training_3 (some tasks implemented in TaskRunner/ThirdTrainingTaskRunner.cs)
